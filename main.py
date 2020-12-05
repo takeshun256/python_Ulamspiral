@@ -1,3 +1,3 @@
 print("初めまして！")
-print("takeshun4418")
-print("です。")
+print("私はtakeshun4418です。")
+print("よろしくお願いします")
