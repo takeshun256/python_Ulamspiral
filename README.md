@@ -1,1 +1,1 @@
-# python_tutorial
+# python_Uralspiral
