@@ -1,7 +1,10 @@
 from tkinter import *
 from tkinter import ttk
+
 from matplotlib import pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
+
 #素数判定するis_prime関数
 def is_prime(n):
     if n <= 1:
@@ -72,20 +75,20 @@ def button_run():
     canvas.draw()
     canvas.get_tk_widget().grid(row=0, column=0)
 
-# 以下、rootの構成
+# 以下、rootの構成
 root = Tk()
 root.title('Ulam spiral')
-root.geometry('650x675')
+root.geometry('1300x1350')
 
 # widgetの設定
 frame_1 = Frame(root, bd=4, relief='groove',bg='blue')
 frame_2 = Frame(root, bd=4, relief='groove',bg='blue')
-label_1 = Label(frame_1, bg='blue', fg='white', font=('',20,'bold'), text='「ウラムの螺旋」作成プログラム')
-label_2 = Label(frame_1, bg='#a9ceec', fg='black', text='ウラムの螺旋（素数螺旋）とは、\n\
-素数の分布をある簡単なルールに従って2次元平面に並べ、可視化したものである。\n\
-これは1963年、数学者のスタニスワフ・ウラムによって発見された。')
-label_3 = Label(frame_1, bg='#a9ceec', fg='black', text='↓テキストボックスで数字を選択すると、\n\
-１の場合は素数螺旋、２以上の場合はその数字の倍数の螺旋が表示されます。')
+label_1 = Label(frame_1, bg='blue', fg='white', font=('',20,'bold'), text='Program to create "Ulam Spiral"')
+label_2 = Label(frame_1, bg='#a9ceec', fg='black', text='What is Ulam spiral?\n\
+The distribution of prime numbers is visualized by arranging them on a two-dimensional plane according to certain simple rules.\n\
+It was discovered by mathematician Stanislaw Ulam in 1963.')
+label_3 = Label(frame_1, bg='#a9ceec', fg='black', text='↓Select a number in the text box\n\
+If 1, a prime spiral is displayed; if 2 or more, a spiral that is a multiple of that number is displayed.')
 valuelist = [i for i in range(1,100)]
 text = ttk.Combobox(frame_1,values=valuelist,width = 2)
 button = Button(frame_1, text='Run',fg='blue',font=('',14,'bold'), command=button_run)
