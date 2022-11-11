@@ -1,10 +1,11 @@
-import tkinter as tk
 import random
+import tkinter as tk
+
 #from tkinter import ttk
 from matplotlib import pyplot as plt
 
 root = tk.Tk()
-root.title("$test1_1$")
+root.title("raindrop")
 root.geometry('600x600')
 
 class Cannon:
